@@ -1,0 +1,8 @@
+{
+  "title": "JSON Example",
+  "author": "Minsu",
+  "year": 2026,
+  "isPublished": true,
+  "topics": ["JSON", "JavaScript", "API"],
+  "description": "sample.json file for lecture05"
+}
