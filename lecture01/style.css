@@ -5,7 +5,7 @@ body {
 }
 
 .wrap {
-  width: 400px;
+  width: min(720px, calc(100% - 40px));
   margin: 60px auto;
   text-align: center;
 }
@@ -15,6 +15,8 @@ body {
   border-radius: 12px;
   background-color: white;
   border: 2px solid #dcdcdc;
+  text-align: left;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .box.active {
@@ -24,11 +26,44 @@ body {
 
 h1 {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
   margin-bottom: 20px;
   font-size: 18px;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+}
+
+.status,
+.count {
+  margin-bottom: 12px;
+}
+
+.count {
+  font-size: 15px;
+  color: #666;
+}
+
+.button-row,
+.input-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.input-row input {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 button {
@@ -43,4 +78,59 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+.dom-list {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.dom-list li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.dom-list li.done {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.storage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.storage-card {
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fafafa;
+}
+
+.storage-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.note {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.preview-box {
+  min-height: 130px;
+  margin: 0;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #1f2430;
+  color: #f1f1f1;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
 }
